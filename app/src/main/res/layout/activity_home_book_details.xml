@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="false">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_bottom_border"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="90dp"
+            app:collapsedTitleTextAppearance="@style/AppTheme.Title.Collapsed"
+            app:expandedTitleTextAppearance="@style/AppTheme.Title.Expanded"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlwaysCollapsed"
+            app:titleEnabled="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetStart="0dp"
+                    app:elevation="0dp">
+
+
+                    <TextView
+                        android:id="@+id/itemHomeBook_TV_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" vishvkarma "
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/home_detail_IV_back"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="180dp"
+                        android:elevation="30dp"
+                        android:src="@drawable/new_close"
+                        android:layout_marginLeft="10dp" />
+
+
+
+                </androidx.appcompat.widget.Toolbar>
+
+
+                <ImageView
+                    android:id="@+id/home_detail_IV_bookImage"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/news1"
+                    app:tint="@color/white" />
+
+                    <!--Share-->
+                    <ImageView
+                        android:id="@+id/home_detail_IV_share"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="310dp"
+                        android:layout_marginLeft="200dp"
+                        android:layout_marginBottom="10dp"
+                        android:elevation="30dp"
+                        android:src="@drawable/new_share" />
+
+
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+              <LinearLayout
+                    android:id="@+id/itemHomeBook_layoutLinear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/itemHomeBook_TV_rupes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="₹"
+                        android:textColor="#E91E25"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!--selling-->
+                    <TextView
+                        android:id="@+id/itemHomeBook_TV_selling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="100"
+                        android:textStyle="bold"
+                        android:textColor="#E91E25"
+                        android:textSize="38sp" />
+
+                    <!--Original-->
+                    <TextView
+                        android:id="@+id/itemHomeBook_TV_original"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginLeft="60dp"
+                        android:text="₹50 "
+                        android:layout_marginTop="5dp"
+                        android:textColor="#0A0B0B"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            <!--Location-->
+            <LinearLayout
+                android:id="@+id/itemHomeBook_layoutLinear_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/red_location_on"
+                    android:layout_marginLeft="10dp" />
+
+                <TextView
+                    android:id="@+id/itemHomeBook_TV_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text=" mahavir nagar , Kolhapur "
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:layout_marginStart="10dp">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/itemBook_Category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Category"
+                    android:textColor="#D61021"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:layout_marginStart="5dp" />
+
+                <TextView
+                    android:id="@+id/itemBook_tv_catagory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/itemBook_Category"
+                    android:text="Education"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@+id/itemBook_Category"
+                    android:layout_marginStart="30dp" />
+
+
+                <TextView
+                    android:id="@+id/itemBook_Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/itemBook_Category"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Description"
+                    android:textColor="#D61021"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp" />
+
+                <TextView
+                    android:id="@+id/itemBook_tv_Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/itemBook_Category"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:inputType="textImeMultiLine"
+                    android:layout_toRightOf="@+id/itemBook_Description"
+                    android:text=" This is a description of a layout "
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/itemBook_Description" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/itemBook_layoutRelative_seller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <!--name-->
+                <LinearLayout
+                    android:id="@+id/linearName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/profile_person"
+                        android:layout_marginLeft="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical"
+                        android:layout_marginStart="5dp">
+
+                        <TextView
+                            android:id="@+id/profile_tv_sellerName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Anagha Shaha"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:layout_marginStart="10dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--No of books Added-->
+                <LinearLayout
+                    android:id="@+id/linearBookNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linearName"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/profile_book" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical"
+                        android:layout_marginStart="5dp">
+
+                        <TextView
+                            android:id="@+id/profile_tv_sellerBooksQty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="20sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:text="5 books added by seller"
+                            android:layout_marginStart="10dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--right arrow-->
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/home_detail_layoutMaps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/seller_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:textStyle="bold"
+                    android:text="Seller Location On Gps : "
+                    android:textSize="20sp"
+                    android:textColor="#F30707"
+                    android:layout_marginLeft="10dp" />
+
+                <ImageView
+                    android:id="@+id/home_detail_iv_maps"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/map"
+                    android:text="See Location on maps" />
+
+            </LinearLayout>
+
+            <com.leinardi.android.speeddial.SpeedDialView
+                android:id="@+id/fabBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SpeedDial.fabColor"
+                app:sdMainFabOpenedBackgroundColor="@color/white"
+                app:sdMainFabClosedBackgroundColor="@color/white"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="65dp"
+                android:layout_marginStart="300dp"
+                app:sdMainFabOpenedSrc="@drawable/cancel"
+                app:sdMainFabClosedSrc="@drawable/contact"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="300dp" />
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
